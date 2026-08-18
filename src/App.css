@@ -28,8 +28,12 @@ body {
 
 .app-header h1 {
   font-size: 2.5em;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  text-shadow: 
+    2px 2px 4px rgba(0,0,0,0.5),
+    0 0 10px rgba(212, 175, 55, 0.8),
+    0 0 20px rgba(212, 175, 55, 0.5);
   color: #d4af37;
+  letter-spacing: 2px;
 }
 
 .add-widget-btn {
@@ -41,12 +45,16 @@ body {
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  box-shadow: 
+    0 0 15px rgba(212, 175, 55, 0.5),
+    0 4px 15px rgba(212, 175, 55, 0.3);
 }
 
 .add-widget-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+  box-shadow: 
+    0 0 25px rgba(212, 175, 55, 0.8),
+    0 6px 20px rgba(212, 175, 55, 0.5);
 }
 
 .widget-creator {
@@ -56,6 +64,7 @@ body {
   border-radius: 15px;
   padding: 25px;
   margin-bottom: 30px;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
 }
 
 .widget-creator h2 {
@@ -63,6 +72,7 @@ body {
   text-align: center;
   color: #d4af37;
   font-size: 1.8em;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
 }
 
 .form-group {
@@ -75,6 +85,7 @@ body {
   font-weight: bold;
   font-size: 1.1em;
   color: #d4af37;
+  text-shadow: 0 0 5px rgba(212, 175, 55, 0.4);
 }
 
 .form-group input,
@@ -86,6 +97,7 @@ body {
   font-size: 1em;
   background: rgba(15, 27, 60, 0.8);
   color: #ffffff;
+  box-shadow: inset 0 0 5px rgba(212, 175, 55, 0.1);
 }
 
 .form-group input::placeholder {
@@ -109,10 +121,12 @@ body {
   border-radius: 8px;
   transition: background 0.3s;
   color: #ffffff;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
 }
 
 .checkbox-label:hover {
   background: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
 }
 
 .checkbox-label input {
@@ -131,158 +145,4 @@ body {
   font-weight: bold;
   font-size: 1.1em;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-}
-
-.create-btn:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
-}
-
-.widgets-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.widget {
-  background: rgba(212, 175, 55, 0.1);
-  backdrop-filter: blur(10px);
-  border: 2px solid #d4af37;
-  border-radius: 12px;
-  padding: 20px;
-  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
-}
-
-.widget:hover {
-  transform: translateY(-5px);
-  background: rgba(212, 175, 55, 0.2);
-  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
-}
-
-.widget-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.widget-header h3 {
-  font-size: 1.3em;
-  margin: 0;
-  color: #d4af37;
-}
-
-.delete-btn {
-  background: rgba(255, 0, 0, 0.3);
-  border: 1px solid rgba(255, 0, 0, 0.6);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  font-size: 1.2em;
-  transition: background 0.3s;
-}
-
-.delete-btn:hover {
-  background: rgba(255, 0, 0, 0.6);
-}
-
-.widget-base {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #d4af37;
-  margin-bottom: 15px;
-}
-
-.widget-base small {
-  color: #d4af37;
-}
-
-.widget-base strong {
-  color: #d4af37;
-}
-
-.refresh-btn-small {
-  background: rgba(212, 175, 55, 0.3);
-  border: 1px solid #d4af37;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  font-size: 1em;
-  transition: background 0.3s;
-  color: #d4af37;
-}
-
-.refresh-btn-small:hover {
-  background: rgba(212, 175, 55, 0.5);
-}
-
-.widget-rates {
-  display: grid;
-  gap: 10px;
-}
-
-.widget-rates-compact {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.widget-rates-grid {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.widget-rates-list {
-  grid-template-columns: 1fr;
-}
-
-.rate-item {
-  background: rgba(212, 175, 55, 0.15);
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #d4af37;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background 0.3s;
-}
-
-.rate-item:hover {
-  background: rgba(212, 175, 55, 0.25);
-}
-
-.currency-code {
-  font-weight: bold;
-  font-size: 1.1em;
-  color: #d4af37;
-}
-
-.rate-value {
-  color: #d4af37;
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
-@media (max-width: 768px) {
-  .app-header {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .app-header h1 {
-    font-size: 2em;
-  }
-
-  .widgets-container {
-    grid-template-columns: 1fr;
-  }
-
-  .widget-rates-compact,
-  .widget-rates-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+  transition:
