@@ -5,7 +5,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #0f1b3c 0%, #1a2a4e 100%);
   min-height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -14,7 +14,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  color: white;
+  color: #ffffff;
 }
 
 .app-header {
@@ -28,28 +28,31 @@ body {
 
 .app-header h1 {
   font-size: 2.5em;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  color: #d4af37;
 }
 
 .add-widget-btn {
   padding: 10px 20px;
-  background: white;
-  color: #667eea;
+  background: #d4af37;
+  color: #0f1b3c;
   border: none;
   border-radius: 25px;
   font-weight: bold;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
 
 .add-widget-btn:hover {
   transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
 }
 
 .widget-creator {
-  background: rgba(255,255,255,0.15);
+  background: rgba(212, 175, 55, 0.1);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 2px solid #d4af37;
   border-radius: 15px;
   padding: 25px;
   margin-bottom: 30px;
@@ -58,6 +61,8 @@ body {
 .widget-creator h2 {
   margin-bottom: 20px;
   text-align: center;
+  color: #d4af37;
+  font-size: 1.8em;
 }
 
 .form-group {
@@ -69,15 +74,22 @@ body {
   margin-bottom: 8px;
   font-weight: bold;
   font-size: 1.1em;
+  color: #d4af37;
 }
 
 .form-group input,
 .form-group select {
   width: 100%;
   padding: 10px;
-  border: none;
+  border: 1px solid #d4af37;
   border-radius: 8px;
   font-size: 1em;
+  background: rgba(15, 27, 60, 0.8);
+  color: #ffffff;
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .currency-selector {
@@ -92,35 +104,40 @@ body {
   gap: 8px;
   cursor: pointer;
   padding: 8px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid #d4af37;
   border-radius: 8px;
   transition: background 0.3s;
+  color: #ffffff;
 }
 
 .checkbox-label:hover {
-  background: rgba(255,255,255,0.2);
+  background: rgba(212, 175, 55, 0.3);
 }
 
 .checkbox-label input {
   width: auto;
   cursor: pointer;
+  accent-color: #d4af37;
 }
 
 .create-btn {
   width: 100%;
   padding: 12px;
-  background: white;
-  color: #667eea;
+  background: #d4af37;
+  color: #0f1b3c;
   border: none;
   border-radius: 8px;
   font-weight: bold;
   font-size: 1.1em;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
 
 .create-btn:hover {
   transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
 }
 
 .widgets-container {
@@ -130,17 +147,19 @@ body {
 }
 
 .widget {
-  background: rgba(255,255,255,0.15);
+  background: rgba(212, 175, 55, 0.1);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 2px solid #d4af37;
   border-radius: 12px;
   padding: 20px;
-  transition: transform 0.3s, background 0.3s;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
 }
 
 .widget:hover {
   transform: translateY(-5px);
-  background: rgba(255,255,255,0.25);
+  background: rgba(212, 175, 55, 0.2);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
 }
 
 .widget-header {
@@ -153,11 +172,12 @@ body {
 .widget-header h3 {
   font-size: 1.3em;
   margin: 0;
+  color: #d4af37;
 }
 
 .delete-btn {
-  background: rgba(255,0,0,0.3);
-  border: none;
+  background: rgba(255, 0, 0, 0.3);
+  border: 1px solid rgba(255, 0, 0, 0.6);
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -167,7 +187,7 @@ body {
 }
 
 .delete-btn:hover {
-  background: rgba(255,0,0,0.6);
+  background: rgba(255, 0, 0, 0.6);
 }
 
 .widget-base {
@@ -175,23 +195,32 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 15px;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid #d4af37;
   margin-bottom: 15px;
 }
 
+.widget-base small {
+  color: #d4af37;
+}
+
+.widget-base strong {
+  color: #d4af37;
+}
+
 .refresh-btn-small {
-  background: rgba(255,255,255,0.2);
-  border: none;
+  background: rgba(212, 175, 55, 0.3);
+  border: 1px solid #d4af37;
   border-radius: 50%;
   width: 30px;
   height: 30px;
   cursor: pointer;
   font-size: 1em;
   transition: background 0.3s;
+  color: #d4af37;
 }
 
 .refresh-btn-small:hover {
-  background: rgba(255,255,255,0.4);
+  background: rgba(212, 175, 55, 0.5);
 }
 
 .widget-rates {
@@ -212,9 +241,10 @@ body {
 }
 
 .rate-item {
-  background: rgba(255,255,255,0.1);
+  background: rgba(212, 175, 55, 0.15);
   padding: 12px;
   border-radius: 8px;
+  border: 1px solid #d4af37;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -222,16 +252,17 @@ body {
 }
 
 .rate-item:hover {
-  background: rgba(255,255,255,0.2);
+  background: rgba(212, 175, 55, 0.25);
 }
 
 .currency-code {
   font-weight: bold;
   font-size: 1.1em;
+  color: #d4af37;
 }
 
 .rate-value {
-  color: #ffd700;
+  color: #d4af37;
   font-weight: bold;
   font-size: 1.2em;
 }
