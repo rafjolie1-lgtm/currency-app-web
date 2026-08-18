@@ -33,7 +33,7 @@ function App() {
 
   const fetchCurrencies = async () => {
     try {
-      const response = await fetch('http://192.168.0.150:3000/api/currencies')
+      const response = await fetch('http://currency-app-backend-nine.vercel.app/api/currencies')
       const data = await response.json()
       if (data.success) {
         setCurrencies(data.data.map(c => c.code))
@@ -47,7 +47,7 @@ function App() {
   try {
     const widget = widgets.find(w => w.id === widgetId)
     const symbols = widget.displayCurrencies.join(',')
-    const response = await fetch(`http://192.168.0.150:3000/api/rates/${symbols}?base=${widget.baseCurrency}`)
+    const response = await fetch(`http://currency-app-backend-nine.vercel.app/api/rates/${symbols}?base=${widget.baseCurrency}`)
     
     if (!response.ok) {
       console.error('API Error:', response.status)
